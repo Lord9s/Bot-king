@@ -21,7 +21,7 @@ const EMOTIONS = {
 module.exports = {
     config: {
         name: 'anya',
-        aliases: ['ai', 'chat'],
+        aliases: ['lor', 'chat'],
         version: '2.0.0',
         author: 'Priyanshi Kaur',
         countDown: 5,
