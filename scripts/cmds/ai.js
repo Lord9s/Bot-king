@@ -1,9 +1,10 @@
 const axios = require('axios');
 
 let PriyaPrefix = [
-  'queen',
+  'lord',
   'ai',
-  '.ai', // Add Your Prefix Here
+  '-ai',
+  'darc', // Add Your Prefix Here
 ];
 
 const axiosInstance = axios.create();
@@ -13,7 +14,7 @@ module.exports = {
     name: 'ai',
     version: '2.2.0',
     role: 0,
-    category: 'AI',
+    category: '𝘈𝘪',
     author: 'Priyanshi Kaur 🩶 Priyansh Rajput',
     shortDescription: 'Artificial Intelligence',
     longDescription: 'Ask Anything To Ai For Your Answers',
@@ -27,9 +28,9 @@ module.exports = {
     // Help Command
     if (command === 'help') {
       const helpMessage = `
-      🌟 *AI Commands* 🌟
+      🌟 𝘈𝘪 𝘊𝘰𝘮𝘮𝘢𝘯𝘥𝘴 🌟
       - Prefixes: ${PriyaPrefix.join(', ')}
-      - Add Prefix: addprefix <prefix>
+      - Add Prefix𝘭: addprefix <prefix>
       - AI Query: ${PriyaPrefix[0]} <your query>
       - Say Hi: hi
       `;
@@ -57,7 +58,7 @@ module.exports = {
 
     const priya = event.body.substring(ahprefix.length).trim();
     if (!priya) {
-      await message.reply('𝑄𝑢𝑒𝑒𝑛 𝐼𝑠 𝐻𝑒𝑟𝑒 𝑇𝑜 𝐻𝑒𝑙𝑝 𝑌𝑜𝑢 ✪');
+      await message.reply('𝙺𝚒𝚗𝚑 𝐼𝑠 𝐻𝑒𝑟𝑒 𝑇𝑜 𝐻𝑒𝑙𝑝 𝑌𝑜𝑢 𝙾𝚗 𝙰𝚗𝚢𝚝𝚑𝚒𝚗𝚐✪');
       return;
     }
 
@@ -81,7 +82,7 @@ module.exports = {
     const encodedPrompt = encodeURIComponent(cleanedQuery);
 
     // Send the initial waiting message
-    const waitingMessage = await message.reply('𝚀𝚞𝚎𝚎𝚗 𝚃𝚑𝚒𝚗𝚔𝚒𝚗𝚐.....');
+    const waitingMessage = await message.reply('𝙺𝚒𝚗𝚐 𝚃𝚑𝚒𝚗𝚔𝚒𝚗𝚐.....');
 
     try {
       // Call the AI API
